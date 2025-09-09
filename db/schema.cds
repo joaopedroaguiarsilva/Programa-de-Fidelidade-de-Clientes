@@ -9,8 +9,8 @@ entity Customers : cuid, managed {
   totalPurchaseValue: Integer;
   totalRewardPoints: Integer;
   totalRedeemedRewardPoints: Integer;
-  purchases: Composition of many Purchases on purchases.customer = $self;
-  redemptions: Composition of many Redemptions on redemptions.customer = $self;
+  purchases: Association to many Purchases on purchases.customer = $self;
+  redemptions: Association to many Redemptions on redemptions.customer = $self;
 }
 
 @assert.unique: { name: [name] }

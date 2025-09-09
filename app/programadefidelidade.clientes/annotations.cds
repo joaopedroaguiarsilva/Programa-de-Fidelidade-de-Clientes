@@ -1,0 +1,1 @@
+using programaDeFidelidadeSrv as service from '../../srv/service';
